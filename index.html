@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sri Vallal Agency – Authorized dealer of Aquatex & Texmo pumps, Asian Paints, Nippon Paint, hardware and electricals in Chennimalai and Kangayam.">
+<title>Sri Vallal Agency | Hardware & Electricals | Chennimalai & Kangayam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --blue: #1a3a6e;
+    --blue-mid: #2255a4;
+    --blue-light: #3b7dd8;
+    --orange: #f47b20;
+    --orange-light: #ffb347;
+    --white: #ffffff;
+    --off-white: #f5f7fa;
+    --gray: #e8ecf2;
+    --gray-mid: #8a9bb5;
+    --text-dark: #0e1c35;
+    --text-mid: #3d5278;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--off-white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 999;
+    background: var(--navy);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 62px;
+    box-shadow: 0 2px 20px rgba(0,0,0,.4);
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    color: var(--white);
+    letter-spacing: 2px;
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .nav-logo span { color: var(--orange); }
+
+  .nav-links {
+    display: flex; gap: 30px; list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--gray-mid);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color .2s;
+  }
+
+  .nav-links a:hover { color: var(--orange); }
+
+  .nav-cta {
+    background: var(--orange);
+    color: var(--white) !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+  }
+
+  .nav-cta:hover { background: var(--orange-light); color: var(--navy) !important; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: .3s; }
+
+  .mobile-menu {
+    display: none;
+    position: fixed; top: 62px; left: 0; right: 0;
+    background: var(--navy);
+    padding: 20px 5%;
+    z-index: 998;
+    flex-direction: column; gap: 20px;
+  }
+
+  .mobile-menu a {
+    color: var(--gray-mid);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    padding-bottom: 14px;
+  }
+
+  .mobile-menu a:hover { color: var(--orange); }
+  .mobile-menu.open { display: flex; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, #1a3560 100%);
+    padding: 80px 5% 90px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero-inner {
+    max-width: 900px; margin: 0 auto;
+    position: relative; z-index: 1;
+    text-align: center;
+  }
+
+  .badge-authorized {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+    animation: fadeDown .6s ease both;
+  }
+
+  .badge-authorized::before { content: '★'; font-size: .9rem; }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: clamp(2.8rem, 8vw, 5.5rem);
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: 3px;
+    animation: fadeDown .7s .1s ease both;
+  }
+
+  .hero h1 span { color: var(--orange); }
+
+  .hero-sub {
+    color: var(--gray-mid);
+    font-size: 1.05rem;
+    margin-top: 16px;
+    line-height: 1.6;
+    animation: fadeDown .7s .2s ease both;
+  }
+
+  .hero-actions {
+    display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    margin-top: 34px;
+    animation: fadeDown .7s .3s ease both;
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 28px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .5px;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s, background .2s;
+    cursor: pointer; border: none;
+  }
+
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+
+  .btn-orange { background: var(--orange); color: var(--white); }
+  .btn-orange:hover { background: var(--orange-light); color: var(--navy); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,.3);
+  }
+
+  .btn-outline:hover { border-color: var(--orange); color: var(--orange); }
+
+  /* ── SECTION ── */
+  section { padding: 70px 5%; }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: var(--navy);
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+
+  .section-title span { color: var(--blue-mid); }
+
+  .section-desc {
+    color: var(--text-mid);
+    margin-top: 10px;
+    font-size: .95rem;
+    max-width: 560px;
+    line-height: 1.65;
+  }
+
+  .section-header { margin-bottom: 44px; }
+
+  /* ── BRANCHES ── */
+  #branches { background: var(--white); }
+
+  .branches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    max-width: 900px;
+  }
+
+  .branch-card {
+    background: var(--off-white);
+    border: 2px solid var(--gray);
+    border-radius: 12px;
+    padding: 32px 28px;
+    cursor: pointer;
+    transition: transform .25s, box-shadow .25s, border-color .25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .branch-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--blue-mid), var(--blue-light));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .3s;
+  }
+
+  .branch-card:hover::before { transform: scaleX(1); }
+  .branch-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(10,22,40,.12); border-color: var(--blue-light); }
+
+  .branch-icon {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--blue-mid), var(--blue-light));
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+  }
+
+  .branch-type {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--blue-mid);
+    background: rgba(34,85,164,.1);
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .branch-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .branch-location {
+    display: flex; align-items: center; gap: 5px;
+    color: var(--orange);
+    font-size: .88rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .branch-desc {
+    color: var(--text-mid);
+    font-size: .9rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .branch-cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--blue-mid);
+    font-weight: 700;
+    font-size: .88rem;
+    letter-spacing: .5px;
+  }
+
+  .branch-cta svg { transition: transform .2s; }
+  .branch-card:hover .branch-cta svg { transform: translateX(4px); }
+
+  /* ── BRANCH MODALS ── */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.6);
+    backdrop-filter: blur(4px);
+    z-index: 9000;
+    align-items: center; justify-content: center;
+    padding: 20px;
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--white);
+    border-radius: 16px;
+    width: 100%; max-width: 580px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modalIn .3s ease;
+    position: relative;
+  }
+
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(30px) scale(.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .modal-header {
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    color: var(--white);
+    padding: 28px 30px 24px;
+    border-radius: 16px 16px 0 0;
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute; top: 16px; right: 16px;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.15);
+    border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white);
+    font-size: 1.1rem;
+    transition: background .2s;
+  }
+
+  .modal-close:hover { background: rgba(255,255,255,.3); }
+
+  .modal-header .m-type {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange-light);
+    margin-bottom: 6px;
+  }
+
+  .modal-header h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+
+  .modal-body { padding: 28px 30px; }
+
+  .info-row {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--gray);
+  }
+
+  .info-row:last-child { border-bottom: none; }
+
+  .info-icon {
+    width: 38px; height: 38px; flex-shrink: 0;
+    background: var(--off-white);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+
+  .info-content label {
+    display: block;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    margin-bottom: 3px;
+  }
+
+  .info-content p, .info-content a {
+    color: var(--text-dark);
+    font-size: .95rem;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1.5;
+  }
+
+  .info-content a:hover { color: var(--blue-mid); }
+
+  .map-frame {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+    border: 1px solid var(--gray);
+  }
+
+  .map-frame iframe { width: 100%; height: 100%; border: none; }
+
+  .modal-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .modal-actions a {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+  }
+
+  .modal-actions a:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+
+  .btn-call { background: var(--blue-mid); color: var(--white); }
+  .btn-wa { background: #25D366; color: var(--white); }
+
+  /* ── BRANDS ── */
+  #brands { background: var(--navy); }
+
+  #brands .section-title { color: var(--white); }
+  #brands .section-label { color: var(--orange-light); }
+  #brands .section-desc { color: var(--gray-mid); }
+
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .brand-card {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px;
+    padding: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .25s, background .25s, border-color .25s;
+    text-decoration: none;
+  }
+
+  .brand-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,.1);
+    border-color: var(--orange);
+  }
+
+  .brand-logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .brand-tagline {
+    font-size: .78rem;
+    color: var(--gray-mid);
+    letter-spacing: .5px;
+  }
+
+  .dealer-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--orange);
+    color: var(--white);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+
+  /* ── PRODUCTS ── */
+  #products { background: var(--off-white); }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+  }
+
+  .product-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px 24px;
+    border: 1px solid var(--gray);
+    transition: transform .25s, box-shadow .25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .3s;
+  }
+
+  .product-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,.1); }
+  .product-card:hover::after { transform: scaleX(1); }
+
+  .product-icon {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+
+  .product-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .product-card p {
+    color: var(--text-mid);
+    font-size: .88rem;
+    line-height: 1.6;
+  }
+
+  .product-tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 14px;
+  }
+
+  .tag {
+    background: var(--gray);
+    color: var(--text-mid);
+    font-size: .72rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: .3px;
+  }
+
+  /* ── WHY US ── */
+  #why { background: var(--white); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 22px;
+  }
+
+  .why-card {
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .why-icon {
+    width: 64px; height: 64px;
+    background: linear-gradient(135deg, rgba(34,85,164,.1), rgba(59,125,216,.15));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+    margin: 0 auto 16px;
+  }
+
+  .why-card h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .why-card p {
+    color: var(--text-mid);
+    font-size: .85rem;
+    line-height: 1.6;
+  }
+
+  /* ── ENQUIRY ── */
+  #enquiry {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--navy) 100%);
+    text-align: center;
+  }
+
+  #enquiry .section-title { color: var(--white); }
+  #enquiry .section-label { color: var(--orange-light); }
+  #enquiry .section-desc { color: var(--gray-mid); margin: 10px auto 0; text-align: center; }
+
+  .enquiry-form {
+    max-width: 520px; margin: 36px auto 0;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+
+  .enquiry-form input,
+  .enquiry-form select,
+  .enquiry-form textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border-radius: 7px;
+    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(255,255,255,.08);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: .92rem;
+    outline: none;
+    transition: border-color .2s, background .2s;
+  }
+
+  .enquiry-form input::placeholder,
+  .enquiry-form textarea::placeholder { color: rgba(255,255,255,.4); }
+
+  .enquiry-form select option { background: var(--navy); color: var(--white); }
+
+  .enquiry-form input:focus,
+  .enquiry-form select:focus,
+  .enquiry-form textarea:focus {
+    border-color: var(--orange);
+    background: rgba(255,255,255,.12);
+  }
+
+  .enquiry-form textarea { resize: vertical; min-height: 100px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #050d1a;
+    color: var(--gray-mid);
+    padding: 50px 5% 30px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 36px;
+  }
+
+  .footer-brand .f-logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.6rem;
+    color: var(--white);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .footer-brand .f-logo span { color: var(--orange); }
+
+  .footer-brand p {
+    font-size: .85rem;
+    line-height: 1.65;
+    max-width: 280px;
+  }
+
+  .footer-col h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .footer-col a { color: var(--gray-mid); text-decoration: none; font-size: .87rem; transition: color .2s; }
+  .footer-col a:hover { color: var(--orange); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.07);
+    padding-top: 22px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    font-size: .8rem;
+  }
+
+  /* ── FLOATING BUTTONS ── */
+  .floating-wa {
+    position: fixed; bottom: 24px; right: 24px; z-index: 8000;
+    width: 56px; height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,.5);
+    text-decoration: none;
+    transition: transform .25s, box-shadow .25s;
+    animation: pulse 2.5s infinite;
+  }
+
+  .floating-wa:hover { transform: scale(1.12); box-shadow: 0 8px 28px rgba(37,211,102,.6); }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,.5); }
+    50% { box-shadow: 0 4px 28px rgba(37,211,102,.8), 0 0 0 10px rgba(37,211,102,.1); }
+  }
+
+  .floating-call {
+    position: fixed; bottom: 92px; right: 24px; z-index: 8000;
+    width: 46px; height: 46px;
+    background: var(--blue-mid);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(34,85,164,.5);
+    text-decoration: none;
+    transition: transform .25s;
+  }
+
+  .floating-call:hover { transform: scale(1.12); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    .hero { padding: 60px 5% 70px; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+
+    .modal-actions { grid-template-columns: 1fr; }
+
+    section { padding: 55px 5%; }
+  }
+
+  @media (max-width: 480px) {
+    .branches-grid { grid-template-columns: 1fr; }
+    .brands-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ── SUCCESS TOAST ── */
+  .toast {
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: .9rem;
+    z-index: 9999;
+    opacity: 0; pointer-events: none;
+    transition: opacity .3s;
+    border-left: 4px solid var(--orange);
+    white-space: nowrap;
+  }
+
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <div class="nav-logo">🔧 SRI <span>VALLAL</span></div>
+  <ul class="nav-links">
+    <li><a href="#branches">Branches</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#brands">Brands</a></li>
+    <li><a href="#enquiry" class="nav-cta">Enquire Now</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#branches" onclick="toggleMenu()">Branches</a>
+  <a href="#products" onclick="toggleMenu()">Products</a>
+  <a href="#brands" onclick="toggleMenu()">Brands</a>
+  <a href="#why" onclick="toggleMenu()">Why Us</a>
+  <a href="#enquiry" onclick="toggleMenu()">Enquire Now</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge-authorized">Authorized Dealer – Aquatex & Texmo Pumps</div>
+    <h1>SRI VALLAL<br><span>AGENCY</span></h1>
+    <p class="hero-sub">Your trusted hardware & electricals partner in Chennimalai and Kangayam.<br>Quality products · Expert service · Best prices.</p>
+    <div class="hero-actions">
+      <a href="#branches" class="btn btn-orange">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Our Branches
+      </a>
+      <a href="#enquiry" class="btn btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Get a Quote
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── BRANCHES ── -->
+<section id="branches">
+  <div class="section-header reveal">
+    <div class="section-label">Our Locations</div>
+    <h2 class="section-title">Two Branches, <span>One Family</span></h2>
+    <p class="section-desc">Click on a branch to view full details, contact info, and directions.</p>
+  </div>
+
+  <div class="branches-grid">
+    <div class="branch-card reveal" onclick="openModal('branch1')">
+      <div class="branch-icon">🏪</div>
+      <span class="branch-type">Hardware</span>
+      <h3>Sri Vallal Agency</h3>
+      <div class="branch-location">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Chennimalai
+      </div>
+      <p class="branch-desc">Hardware specialists offering pipes, taps, brushes, nails, paints, and authorized Aquatex & Texmo pump dealership.</p>
+      <div class="branch-cta">
+        View Details
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+    </div>
+
+    <div class="branch-card reveal" onclick="openModal('branch2')" style="transition-delay:.1s">
+      <div class="branch-icon" style="background:linear-gradient(135deg,#b34000,#f47b20)">⚡</div>
+      <span class="branch-type" style="color:var(--orange);background:rgba(244,123,32,.1)">Electricals</span>
+      <h3>Sri Vallal Electricals</h3>
+      <div class="branch-location">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Kangayam
+      </div>
+      <p class="branch-desc">Electrical solutions including switches, wires, motor controls, and complete pump installation services.</p>
+      <div class="branch-cta" style="color:var(--orange)">
+        View Details
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MODAL: BRANCH 1 ── -->
+<div class="modal-overlay" id="modal-branch1" onclick="closeOnOverlay(event,'branch1')">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal('branch1')">✕</button>
+      <div class="m-type">Hardware & Paints</div>
+      <h2>Sri Vallal Agency</h2>
+    </div>
+    <div class="modal-body">
+      <div class="info-row">
+        <div class="info-icon">📍</div>
+        <div class="info-content">
+          <label>Address</label>
+          <p>Main Road, Chennimalai,<br>Erode District, Tamil Nadu – 638 051</p>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">📞</div>
+        <div class="info-content">
+          <label>Phone</label>
+          <a href="tel:+918012155055">+91 80121 55055</a>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">🕒</div>
+        <div class="info-content">
+          <label>Working Hours</label>
+          <p>Mon – Sat: 8:00 AM – 8:00 PM</p>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31365.25!2d77.5830!3d11.1630!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba907f3c4cf1c7b%3A0x8a1e6b1f3d5e2c1a!2sChennimalai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1"
+          loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <a href="https://maps.google.com/?q=Chennimalai,Tamil+Nadu" target="_blank" style="color:var(--blue-mid);font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:5px;margin-bottom:18px;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Open in Google Maps ↗
+      </a>
+      <div class="modal-actions">
+        <a href="tel:+918012155055" class="btn-call">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.11 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/918012155055?text=Hello%20Sri%20Vallal%20Agency%2C%20I%20need%20assistance." target="_blank" class="btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MODAL: BRANCH 2 ── -->
+<div class="modal-overlay" id="modal-branch2" onclick="closeOnOverlay(event,'branch2')">
+  <div class="modal">
+    <div class="modal-header" style="background:linear-gradient(135deg,#1a1a2e,#b34000)">
+      <button class="modal-close" onclick="closeModal('branch2')">✕</button>
+      <div class="m-type">Electricals & Pumps</div>
+      <h2>Sri Vallal Electricals</h2>
+    </div>
+    <div class="modal-body">
+      <div class="info-row">
+        <div class="info-icon">📍</div>
+        <div class="info-content">
+          <label>Address</label>
+          <p>Kangayam Main Road, Kangayam,<br>Tirupur District, Tamil Nadu – 638 701</p>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">📞</div>
+        <div class="info-content">
+          <label>Phone</label>
+          <a href="tel:+918012155055">+91 80121 55055</a>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">🕒</div>
+        <div class="info-content">
+          <label>Working Hours</label>
+          <p>Mon – Sat: 8:00 AM – 8:00 PM</p>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31365.25!2d77.5620!3d11.0050!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba906b7f3b7c2e1%3A0x3b2c1e6f4a5d7e9b!2sKangayam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1"
+          loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <a href="https://maps.google.com/?q=Kangayam,Tamil+Nadu" target="_blank" style="color:var(--orange);font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:5px;margin-bottom:18px;text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Open in Google Maps ↗
+      </a>
+      <div class="modal-actions">
+        <a href="tel:+918012155055" class="btn-call">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.11 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/918012155055?text=Hello%20Sri%20Vallal%20Electricals%2C%20I%20need%20assistance." target="_blank" class="btn-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── BRANDS ── -->
+<section id="brands">
+  <div class="section-header reveal">
+    <div class="section-label">Trusted Brands</div>
+    <h2 class="section-title">Brands We <span style="color:var(--orange-light)">Carry</span></h2>
+    <p class="section-desc">We are authorized dealers of leading brands. Click to visit their official websites.</p>
+  </div>
+
+  <div class="brands-grid">
+    <a href="https://www.aquagroup.in/" target="_blank" class="brand-card reveal">
+      <div class="brand-logo" style="color:#00bfff">AQUATEX</div>
+      <div class="brand-tagline">Pumps & Water Solutions</div>
+      <div class="dealer-badge">★ Authorized Dealer</div>
+    </a>
+
+    <a href="https://www.texmopumps.com/" target="_blank" class="brand-card reveal" style="transition-delay:.07s">
+      <div class="brand-logo" style="color:#4fc3f7">TEXMO</div>
+      <div class="brand-tagline">Pumps & Motors</div>
+      <div class="dealer-badge">★ Authorized Dealer</div>
+    </a>
+
+    <a href="https://www.asianpaints.com/" target="_blank" class="brand-card reveal" style="transition-delay:.14s">
+      <div class="brand-logo" style="color:#ff7043">ASIAN PAINTS</div>
+      <div class="brand-tagline">Decorative Paints</div>
+    </a>
+
+    <a href="https://www.nipponpaint.co.in/" target="_blank" class="brand-card reveal" style="transition-delay:.21s">
+      <div class="brand-logo" style="color:#ef5350">NIPPON PAINT</div>
+      <div class="brand-tagline">Premium Coatings</div>
+    </a>
+  </div>
+</section>
+
+<!-- ── PRODUCTS ── -->
+<section id="products">
+  <div class="section-header reveal">
+    <div class="section-label">What We Sell</div>
+    <h2 class="section-title">Product <span>Categories</span></h2>
+    <p class="section-desc">Quality products across hardware, electricals, pumps, and paints — all under one roof.</p>
+  </div>
+
+  <div class="products-grid">
+    <div class="product-card reveal">
+      <div class="product-icon">🔧</div>
+      <h3>Pumps & Motors</h3>
+      <p>Submersible, monoblock, and agricultural pumps from Aquatex and Texmo — with installation support.</p>
+      <div class="product-tags">
+        <span class="tag">Aquatex</span>
+        <span class="tag">Texmo</span>
+        <span class="tag">Submersible</span>
+        <span class="tag">Monoblock</span>
+      </div>
+    </div>
+
+    <div class="product-card reveal" style="transition-delay:.08s">
+      <div class="product-icon">🎨</div>
+      <h3>Paints & Primers</h3>
+      <p>Interior, exterior, waterproof, and texture paints from Asian Paints and Nippon Paint with expert guidance.</p>
+      <div class="product-tags">
+        <span class="tag">Asian Paints</span>
+        <span class="tag">Nippon</span>
+        <span class="tag">Primers</span>
+        <span class="tag">Emulsions</span>
+      </div>
+    </div>
+
+    <div class="product-card reveal" style="transition-delay:.16s">
+      <div class="product-icon">⚡</div>
+      <h3>Electricals</h3>
+      <p>Switches, sockets, MCBs, wires, cables, and motor starters for domestic and industrial needs.</p>
+      <div class="product-tags">
+        <span class="tag">Switches</span>
+        <span class="tag">Wires</span>
+        <span class="tag">MCBs</span>
+        <span class="tag">Cables</span>
+      </div>
+    </div>
+
+    <div class="product-card reveal" style="transition-delay:.24s">
+      <div class="product-icon">🏗️</div>
+      <h3>Hardware</h3>
+      <p>PVC pipes, GI pipes, CPVC fittings, taps, valves, nails, screws, and tools for all construction needs.</p>
+      <div class="product-tags">
+        <span class="tag">Pipes</span>
+        <span class="tag">Taps</span>
+        <span class="tag">Nails</span>
+        <span class="tag">Brushes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY US ── -->
+<section id="why">
+  <div class="section-header reveal" style="text-align:center">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title" style="text-align:center">Built on <span>Trust</span></h2>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon">🏆</div>
+      <h4>Authorized Dealer</h4>
+      <p>Official Aquatex & Texmo dealer ensuring genuine products with manufacturer warranty.</p>
+    </div>
+    <div class="why-card reveal" style="transition-delay:.08s">
+      <div class="why-icon">📦</div>
+      <h4>Wide Product Range</h4>
+      <p>Pumps, paints, hardware, and electricals — everything for your home or site in one stop.</p>
+    </div>
+    <div class="why-card reveal" style="transition-delay:.16s">
+      <div class="why-icon">🤝</div>
+      <h4>Trusted Since Decades</h4>
+      <p>Serving Chennimalai and Kangayam communities with integrity, quality, and fair pricing.</p>
+    </div>
+    <div class="why-card reveal" style="transition-delay:.24s">
+      <div class="why-icon">🚀</div>
+      <h4>Fast Delivery</h4>
+      <p>Quick dispatch and delivery across nearby towns. Call or WhatsApp to confirm availability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── ENQUIRY ── -->
+<section id="enquiry">
+  <div class="reveal" style="text-align:center">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Request a <span style="color:var(--orange-light)">Quote</span></h2>
+    <p class="section-desc">Drop your enquiry and we'll get back to you via WhatsApp or call — quickly.</p>
+  </div>
+
+  <form class="enquiry-form reveal" onsubmit="submitEnquiry(event)">
+    <input type="text" placeholder="Your Name *" required>
+    <input type="tel" placeholder="Phone Number *" required>
+    <select>
+      <option value="">Select Branch</option>
+      <option>Sri Vallal Agency – Chennimalai</option>
+      <option>Sri Vallal Electricals – Kangayam</option>
+    </select>
+    <select>
+      <option value="">Product / Category</option>
+      <option>Pumps & Motors</option>
+      <option>Paints & Primers</option>
+      <option>Electricals</option>
+      <option>Hardware</option>
+      <option>Other</option>
+    </select>
+    <textarea placeholder="Describe your requirement (optional)"></textarea>
+    <button type="submit" class="btn btn-orange" style="width:100%;justify-content:center;font-size:1rem;padding:15px">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Send Enquiry via WhatsApp
+    </button>
+  </form>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="f-logo">SRI <span>VALLAL</span></div>
+      <p>Trusted hardware & electrical dealer in Erode and Tirupur districts. Authorized Aquatex & Texmo pump dealer since decades.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#branches">Our Branches</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#enquiry">Enquire Now</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+918012155055">📞 Chennimalai Branch</a></li>
+        <li><a href="tel:+918012155055">📞 Kangayam Branch</a></li>
+        <li><a href="https://wa.me/918012155055" target="_blank">💬 WhatsApp Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Sri Vallal Agency. All rights reserved.</span>
+    <span style="color:var(--orange)">★ Authorized Dealer – Aquatex & Texmo</span>
+  </div>
+</footer>
+
+<!-- ── FLOATING BUTTONS ── -->
+<a href="https://wa.me/918012155055?text=Hello%20Sri%20Vallal%2C%20I%20need%20help." target="_blank" class="floating-wa" title="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<a href="tel:+918012155055" class="floating-call" title="Call Us">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.11 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+</a>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast">✅ Enquiry sent! We'll contact you shortly.</div>
+
+<script>
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // Modal
+  function openModal(id) {
+    document.getElementById('modal-' + id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(id) {
+    document.getElementById('modal-' + id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeOnOverlay(e, id) {
+    if (e.target === e.currentTarget) closeModal(id);
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      ['branch1','branch2'].forEach(closeModal);
+    }
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Enquiry form → WhatsApp
+  function submitEnquiry(e) {
+    e.preventDefault();
+    const f = e.target;
+    const name = f[0].value;
+    const phone = f[1].value;
+    const branch = f[2].value || 'Not specified';
+    const product = f[3].value || 'Not specified';
+    const msg = f[4].value || '';
+
+    const text = encodeURIComponent(
+      `Hello Sri Vallal!\n\n*New Enquiry*\nName: ${name}\nPhone: ${phone}\nBranch: ${branch}\nProduct: ${product}\nMessage: ${msg}`
+    );
+
+    window.open('https://wa.me/918012155055?text=' + text, '_blank');
+
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3500);
+    f.reset();
+  }
+</script>
+</body>
+</html>

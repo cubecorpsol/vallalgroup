@@ -73,8 +73,8 @@
         text-decoration: none;
       }
       .nav-logo-img {
-  width: 60px;
-  height: 60px;
+  width: 35px;
+  height: 35px;
   object-fit: cover;
   display: block;
   border-radius: 50%;
@@ -153,17 +153,50 @@
         display: flex;
       }
 
-      /* HERO */
-     .hero {
-  background: url("images/login1.png") center/cover no-repeat;
-  padding: 60px 5% 70px;
+ /* HERO for background */
+.hero {
   position: relative;
+  width: 100%;
+  aspect-ratio: 2.4 / 1; /* keep this */
   overflow: hidden;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
 }
 
+/* blurred background */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/login1.png") center/cover no-repeat;
+  filter: blur(8px);
+  transform: scale(1.1);
+}
+
+/* main image */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/login1.png") center/contain no-repeat;
+  transform: scale(1.15); /* 🔥 IMPORTANT - increase this */
+}
+
+/* blurred background */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/login1.png") center/cover no-repeat;
+  filter: blur(8px);
+  transform: scale(1.1);
+}
+
+/* main image */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/login1.png") center/contain no-repeat;
+}
 /* Remove old background layers */
 .hero-bg-img {
   display: none;
@@ -1400,6 +1433,8 @@
       .bp-email-link:hover {
         text-decoration: underline;
       }
+        <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/finallogo.png">
     </style>
   </head>
   <body>
@@ -1428,44 +1463,12 @@
     </div>
 
     <!-- HERO -->
-    <section class="hero">
-      <div class="hero-bg-img"></div>
-      <div class="hero-inner">
-        <h1 class="hero-authorized-heading">★ Authorized Dealer – Texmo &amp; Aquatex Motor <br><span>Pumps</span></h1>
-         <p class="hero-sub">Hardware · Electricals · Engineering Works · Paints<br>Serving Kangayam &amp; Chennimalai with trust since decades.</p>
-          <div class="hero-actions">
-          <a href="#branches" class="btn btn-orange">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-            >
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            Our Branches
-          </a>
-          <a href="#enquiry" class="btn btn-outline">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-            >
-              <path
-                d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
-              />
-            </svg>
-            Get Quote
-          </a>
-        </div>
-      </div>
-    </section>
+<section class="hero">
+  <div class="hero-bg-img"></div>
+  <div class="hero-inner">
+    <!-- Empty hero (only background image) -->
+  </div>
+</section>
 
     <!-- BRANCHES -->
     <section id="branches">
@@ -1548,8 +1551,7 @@
             Chennimalai
           </div>
           <p class="branch-desc">
-            Hardware, paints, pipes, sanitary &amp; pump dealer. Nerolac,
-            Johnson, Texmo, Aquatex and more — all under one roof.
+            Authorised Texmo & Aquatex dealer, paints, pipes, drip irrigation, and sanitarywares dealer.
           </p>
           <button
             class="branch-cta"
@@ -3350,7 +3352,7 @@
         >
           <div class="brand-logo-wrap">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfUlkh81IiOWvvMbbLKVnuVMdWsYa8kTBctQ&s"
+              src="images/Finolex_logo_header.svg" alt="Finolex"
               alt="Finolex Logo"
               loading="lazy"
             />
@@ -3367,7 +3369,7 @@
         >
           <div class="brand-logo-wrap">
             <img
-              src="https://images.seeklogo.com/logo-png/30/1/ashirvad-logo-png_seeklogo-305072.png"
+              src="images/ashirvad-logo.jpg"
               alt="Ashirvad Pipes Logo"
               loading="lazy"
             />
@@ -3435,7 +3437,7 @@
         >
           <div class="brand-logo-wrap">
             <img
-              src="https://i.pinimg.com/474x/69/f4/99/69f499eec25bf24bb927bd1576076bb9.jpg"
+              src="images/nerolac-logo.png"
               alt="Nerolac Paints Logo"
               loading="lazy"
             />
@@ -3452,7 +3454,7 @@
         >
           <div class="brand-logo-wrap">
             <img
-              src="https://mykit.in/crm/public/uploads/brand_logos/Johnson.jpg"
+              src="images/johnson-tiles.svg"
               alt="Johnson Sanitary Logo"
               loading="lazy"
             />
@@ -3469,7 +3471,7 @@
         >
           <div class="brand-logo-wrap">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd9UZA7BAF1aCIIXiJmNsa5pVNnkuEj2-bnQ&s"
+              src="images/myk tile adhesive.png"
               alt="MYK Tile Adhesive Logo"
               loading="lazy"
             />
@@ -3498,7 +3500,7 @@
         >
           <div class="brand-logo-wrap">
             <img
-              src="https://logowik.com/content/uploads/images/astral-pipes9674.logowik.com.webp"
+              src="images/astral pipes.png"
               alt="Astral Pipes Logo"
               loading="lazy"
             />
